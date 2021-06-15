@@ -21,7 +21,7 @@
     </li>
     @endauth
 
-    @guest 
+    @guest
     <li class="nav-item">
       <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>
     </li>
@@ -29,13 +29,14 @@
 
     @guest
     <li class="nav-item">
-      <a class="nav-link" href="">ログイン</a>
+      <a class="nav-link" href="{{ route('login') }}">ログイン</a>
     </li>
     @endguest
 
-    <li class="nav-item">
-      <a class="nav-link" href="">ゲストログイン</a>
-    </li>
+
+    <a href="{{ route('login.guest') }}" class="btn btn-default p-3">
+      ゲストログイン
+    </a>
 
     @auth
     <!-- Dropdown -->
