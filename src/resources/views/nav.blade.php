@@ -1,17 +1,18 @@
-<nav class="navbar navbar-expand navbar-dark bg-warning">
+<nav class="navbar navbar-expand navbar-dark sunny-morning-gradient sticky-top">
+
 <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>read book</a>
 
   <ul class="navbar-nav ml-auto">
 
-    @auth
+    
     <li class="nav-item">
       <a class="nav-link" href=""><i class="fas fa-book-reader"></i>リードブックとは？</a>
     </li>
-    @endauth
+    
     
     @auth 
     <li class="nav-item">
-      <a class="nav-link" href=""><i class="fas fa-pen mr-1"></i>投稿する</a>
+      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a>
     </li>
     @endauth
 
