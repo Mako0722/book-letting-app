@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand navbar-dark bg-warning">
+<nav class="navbar navbar-expand navbar-dark sunny-morning-gradient sticky-top">
+
 <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>read book</a>
 
   <ul class="navbar-nav ml-auto">
