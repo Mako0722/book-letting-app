@@ -14,4 +14,7 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Auth::routes(); 
+Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 Route::get('/', 'ArticleController@index');
+

@@ -3,30 +3,42 @@
 
   <ul class="navbar-nav ml-auto">
 
+    @auth
     <li class="nav-item">
       <a class="nav-link" href=""><i class="fas fa-book-reader"></i>リードブックとは？</a>
     </li>
-
+    @endauth
+    
+    @auth 
     <li class="nav-item">
       <a class="nav-link" href=""><i class="fas fa-pen mr-1"></i>投稿する</a>
     </li>
+    @endauth
 
+    @auth 
     <li class="nav-item">
       <a class="nav-link" href=""><i class="fas fa-bookmark"></i>ブックリスト</a>
     </li>
+    @endauth
 
+    @guest
     <li class="nav-item">
-      <a class="nav-link" href="">ユーザー登録</a>
+      <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>
     </li>
+    @endguest
 
+    @guest
     <li class="nav-item">
-      <a class="nav-link" href="">ログイン</a>
+      <a class="nav-link" href="{{ route('login') }}">ログイン</a>
     </li>
+    @endguest
 
-    <li class="nav-item">
-      <a class="nav-link" href="">ゲストログイン</a>
-    </li>
 
+    <a href="{{ route('login.guest') }}" class="btn btn-default p-3">
+      ゲストログイン
+    </a>
+
+    @auth
     <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -44,10 +56,11 @@
         </button>
       </div>
     </li>
-    <form id="logout-button" method="POST" action="">
+    <form id="logout-button" method="POST" action="{{ route('logout') }}">
+      @csrf
     </form>
     <!-- Dropdown -->
-
+    @endauth
   </ul>
 
 </nav>
