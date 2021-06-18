@@ -3,7 +3,7 @@
 @section('title', 'ユーザー登録')
 
 @section('content')
-  <div class="container">
+  <div class="container w-50">
     <div class="row">
       <div class="mx-auto col col-12 col-sm-11 col-md-9 col-lg-7 col-xl-6">
         <h1 class="text-center"><a class="text-dark" href="/">read book </a></h1>
