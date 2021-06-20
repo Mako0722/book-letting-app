@@ -15,6 +15,11 @@
 //     return view('welcome');
 // });
 Auth::routes(); 
+
+Route::get('comic', 'ComicController@index');
+Route::get('comic/add', 'ComicController@add');
+Route::post('comic/add', 'ComicController@create');
+
 Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 Route::get('/', 'ArticleController@index')->name('articles.index');
 Route::resource('/articles', 'ArticleController')->except(['index','show'])->middleware('auth');
